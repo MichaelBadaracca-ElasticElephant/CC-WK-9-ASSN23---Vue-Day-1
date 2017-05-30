@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,8 @@
 </head>
 <body>
     <div id="app">
-        {{test}}
+        <input v-model="username" />
+        <p style="font-size:4em" v-if="username.length > 0">Hello, {{username}}</p>
     </div>
     <script src="/main.js"></script>
 </body>
