@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/vue"></script>
+    
+    <title>Vue Exercise 3 - Color Mixer</title>
+</head>
+<body>
+    <style>
+        .show-color{
+            height:20px;
+            width:20px;
+            display:inline-block;
+            background-color:red;   
+        }
+    </style>
+    <div id="app">
+        <div >
+            <div><label>Color 1</label></div>
+            <label>R</label>
+            <input v-model.number="color1.red" />
+            <label>G</label>
+            <input v-model.number="color1.green"  />
+            <label>B</label>
+            <input v-model.number="color1.blue" />
+            <div class="show-color" v-bind:style="{backgroundColor:displayColor(color1)}"></div>
+        </div>
+        <div >
+            <div><label>Color 2</label></div>
+            <label>R</label>
+            <input v-model.number="color2.red" />
+            <label>G</label>
+            <input v-model.number="color2.green" />
+            <label>B</label>
+            <input v-model.number="color2.blue" />
+            <div class="show-color" v-bind:style="{backgroundColor:displayColor(color2)}"></div>
+        </div>
+        <div >
+            <div><label>Average Of Colors 1 & 2</label></div>
+            <label>R</label>
+            <input v-model.number="averageColor.red" />
+            <label>G</label>
+            <input v-model.number="averageColor.green" />
+            <label>B</label>
+            <input v-model.number="averageColor.blue" />
+            <div class="show-color" v-bind:style="{backgroundColor:computeAverageColor}"></div>
+        </div>
+       
+        <!--<input v-bind:style="{backgroundColor:}" v-model="averageColor" />-->
+
+
+        <!--v-bind:class="{bordered: fullNameTitleCased}"-->
+    </div>
+    <script src="/main.js"></script>
+</body>
+</html>
