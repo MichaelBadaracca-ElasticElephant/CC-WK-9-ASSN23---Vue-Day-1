@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/vue"></script>
+    
+    <title>Vue Exercise 5 - Coffee</title>
+
+
+
+
+</head>
+<body>
+    <div id="app">
+
+        <!--
+            Input field to enter when coffe was drank
+            Div to display caffiene in system
+            
+            
+            
+            -->
+        <input type="datetime-local" v-model.date="timeOfConsumption" />
+        <div>Drank Coffee at: {{timeOfConsumption}}</div>
+        <div>{{timeElapsed}} time has elapsed since</div>
+
+    </div>
+    <script src="/main.js"></script>
+</body>
+</html>
